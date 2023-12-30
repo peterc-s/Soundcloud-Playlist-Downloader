@@ -47,4 +47,4 @@ Execute the script and let it run:
 You should now have all the songs in your playlists downloaded with thumbnails and metadata, enjoy!
 
 ## Credits
-This script is modified from [this blog post](https://blog.rtrace.io/posts/how-to-youtube-dl/index.html) by Raffael (AKA 'Ruffy').
+This script is modified from [this blog post](https://blog.rtrace.io/posts/how-to-youtube-dl/index.html) by Raffael (AKA 'Ruffy'). Please read this blog post for legal and ethical implications.
