@@ -10,9 +10,13 @@ sudo apt-get install ffmpeg yt-dlp -y
 ## Initial Setup
 
 ### Initial Modifications
-1) Download the script.
-2) Replace the '/path/to/save/directory' with the path to the directory you want to save the playlists to. Each playlist will be put in its own folder.
-3) Replace put playlists in the `playlists` dictionary with the playlists you want to download in the format given.
+1) Download the script:
+```bash
+curl https://raw.githubusercontent.com/peterc-s/Soundcloud-Playlist-Downloader/main/sc-dl -o sc-dl; chmod +x sc-dl
+```
+
+3) Replace the '/path/to/save/directory' with the path to the directory you want to save the playlists to. Each playlist will be put in its own folder.
+4) Replace put playlists in the `playlists` dictionary with the playlists you want to download in the format given.
 
 ### Account Authorisation
 1) Navigate to [Soundcloud](https://soundcloud.com/) and sign in.
@@ -35,11 +39,6 @@ sudo apt-get install ffmpeg yt-dlp -y
 You are now ready to run the script!
 
 ## Usage
-Make sure the script is executable:
-```bash
-chmod +x sc-dl
-```
-
 Execute the script and let it run:
 ```bash
 ./sc-dl
