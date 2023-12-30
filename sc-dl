@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# Replace target directory with the directory to save to
+TARGET_DIRECTORY='/path/to/save/directory'
+TARGET_FORMAT='mp3'
+
+# Replace the example with your own playlists
+declare -A playlists=(
+  ["Playlist Name"]=https://soundcloud.com/username-id/sets/playlist-name
+)
+
+for name in "${!playlists[@]}";
+do
+  url=${playlists[$name]}
+  mkdir -p "$TARGET_DIRECTORY/$name"
+  echo "[sc-dl:$(date -u +'%H:%M:%S')] downloading $name ($url)"
+
+  # Replace the user agent and OAuth key
+  yt-dlp \
+    --yes-playlist \
+    --continue \
+    --no-overwrites \
+    --extract-audio \
+    --audio-format "$TARGET_FORMAT" \
+    --prefer-ffmpeg \
+    --sleep-interval 0.5 \
+    -f 'bestaudio' \
+    --download-archive "$TARGET_DIRECTORY/$name/.downloadarchive.txt" \
+    --user-agent 'YOUR USER AGENT' \
+    --add-header 'Authorization':'OAuth x-xxxxxx-xxxxxxxxxx-xxxxxxxxxxxx' \
+    --embed-thumbnail \
+    --add-metadata \
+    --output "$TARGET_DIRECTORY/$name/%(title)s.%(ext)s" \
+    $url
+done
