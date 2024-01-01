@@ -23,7 +23,7 @@ do
     --extract-audio \
     --audio-format "$TARGET_FORMAT" \
     --prefer-ffmpeg \
-    --sleep-interval 0.5 \
+    --sleep-interval 12 \
     -f 'bestaudio' \
     --download-archive "$TARGET_DIRECTORY/$name/.downloadarchive.txt" \
     --user-agent 'YOUR USER AGENT' \
