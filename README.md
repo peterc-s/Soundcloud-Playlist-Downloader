@@ -1,6 +1,8 @@
 # Soundcloud Playlist Downloader
 A simple bash script using yt-dlp to download playlists from soundcloud with account authorisation (for private playlists and Go+ songs).
 
+Note: it is against [Soundclouds Terms of Use](https://soundcloud.com/terms-of-use) section (v) to use automated interactions, your account may be disabled for using this script.
+
 ## Requirements
 You must have `ffmpeg` and `yt-dlp` installed, these can be installed via your package manager, for debian based linux distros use:
 ```bash
